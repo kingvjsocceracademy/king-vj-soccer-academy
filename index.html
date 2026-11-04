@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Join | KING VJ SOCCER ACADEMY</title>
+<title>KING VJ Splash Screen</title>
 
 <style>
 * {
@@ -14,194 +14,80 @@
 }
 
 body {
+    background: #03140b;
     font-family: Arial, sans-serif;
-    background: #071b12;
     color: white;
 }
 
-header {
-    background: #020a05;
-    padding: 20px 8%;
+.splash {
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    animation: fadeOut 0.5s ease 1.5s forwards;
 }
 
 .logo {
-    color: #00ff88;
-    font-size: 23px;
-    font-weight: bold;
-}
-
-header a {
-    color: white;
-    text-decoration: none;
-}
-
-nav a {
-    margin-left: 15px;
-}
-
-nav a:hover {
-    color: #00ff88;
-}
-
-.hero {
-    text-align: center;
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #06391e, #071b12);
-}
-
-.hero h1 {
-    font-size: 42px;
-    color: #00ff88;
-    margin-bottom: 15px;
-}
-
-.hero p {
-    color: #ddd;
-    line-height: 1.7;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-.title {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 35px;
-}
-
-.title span {
-    color: #00ff88;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #10291c;
-    border: 1px solid #1c4931;
-    padding: 25px;
-    border-radius: 10px;
-}
-
-.card h3 {
-    color: #00ff88;
-    margin-bottom: 15px;
-}
-
-.card p {
-    color: #ccc;
-    line-height: 1.7;
-}
-
-.number {
     font-size: 35px;
     font-weight: bold;
     color: #00ff88;
-    margin-bottom: 15px;
+    animation: zoom 1s ease;
 }
 
-.requirements {
-    background: #0b2115;
-    padding: 30px;
-    border-radius: 10px;
-    line-height: 2;
+.ball {
+    font-size: 65px;
+    margin: 25px;
+    animation: bounce 0.8s infinite alternate;
 }
 
-.requirements li {
-    list-style: none;
-}
-
-.requirements li::before {
-    content: "✔ ";
-    color: #00ff88;
-}
-
-.form-box {
-    max-width: 650px;
-    margin: auto;
-    background: #10291c;
-    padding: 30px;
-    border-radius: 12px;
-}
-
-.form-box input,
-.form-box select,
-.form-box textarea {
-    width: 100%;
-    padding: 14px;
-    margin: 10px 0;
-    border: 1px solid #28513a;
-    border-radius: 5px;
-    background: #071b12;
-    color: white;
-}
-
-.form-box label {
-    display: block;
-    margin-top: 12px;
-    color: #ddd;
-}
-
-.btn {
-    display: inline-block;
-    background: #00ff88;
-    color: #03140b;
-    padding: 14px 25px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-.btn:hover {
-    background: white;
-}
-
-.form-box .btn {
-    width: 100%;
-}
-
-.contact {
-    text-align: center;
-    padding: 50px 20px;
-    background: #06391e;
-}
-
-footer {
-    background: #020a05;
-    text-align: center;
-    padding: 25px;
+.tagline {
+    letter-spacing: 4px;
+    font-size: 13px;
     color: #aaa;
 }
 
-footer span {
-    color: #00ff88;
+.loader {
+    width: 160px;
+    height: 4px;
+    background: #153525;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-@media(max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
+.loader span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #00ff88;
+    animation: load 2s linear forwards;
+}
 
-    nav a {
-        margin: 5px;
-        display: inline-block;
+@keyframes zoom {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
     }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
-    .hero h1 {
-        font-size: 30px;
+@keyframes bounce {
+    from { transform: translateY(-10px) rotate(-15deg); }
+    to { transform: translateY(10px) rotate(15deg); }
+}
+
+@keyframes load {
+    to { width: 100%; }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
     }
 }
 </style>
@@ -209,168 +95,22 @@ footer span {
 
 <body>
 
-<!-- HEADER -->
-<header>
-    <a href="index.html" class="logo">KING VJ ⚽</a>
+<div class="splash">
+    <div class="logo">KING VJ</div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="programs.html">Programs</a>
-        <a href="join.html">Join</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <div class="ball">⚽</div>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>JOIN KING VJ SOCCER ACADEMY</h1>
-    <p>Your football journey starts here! Become part of our winning family.</p>
-</div>
+    <div class="tagline">SOCCER ACADEMY</div>
 
-<!-- STEPS -->
-<div class="container">
-    <h2 class="title">HOW TO <span>JOIN</span></h2>
-
-    <div class="steps">
-
-        <div class="card">
-            <div class="number">01</div>
-            <h3>Apply Online</h3>
-            <p>Fill in the registration form below with your personal details.</p>
-        </div>
-
-        <div class="card">
-            <div class="number">02</div>
-            <h3>Contact Our Team</h3>
-            <p>Our academy team will contact you with information about training and selection.</p>
-        </div>
-
-        <div class="card">
-            <div class="number">03</div>
-            <h3>Attend Assessment</h3>
-            <p>Attend a football assessment or trial session to showcase your talent.</p>
-        </div>
-
-        <div class="card">
-            <div class="number">04</div>
-            <h3>Become A Player</h3>
-            <p>Complete the admission process and begin your journey with KING VJ!</p>
-        </div>
-
+    <div class="loader">
+        <span></span>
     </div>
 </div>
 
-<!-- REQUIREMENTS -->
-<div class="container">
-    <h2 class="title">JOINING <span>REQUIREMENTS</span></h2>
-
-    <div class="requirements">
-        <ul>
-            <li>Passion and interest in football.</li>
-            <li>Commitment to training and discipline.</li>
-            <li>Basic personal information.</li>
-            <li>Parent or guardian consent for minors.</li>
-            <li>Ability to participate in academy activities.</li>
-        </ul>
-    </div>
-</div>
-
-<!-- REGISTRATION FORM -->
-<div class="container">
-    <h2 class="title">PLAYER <span>REGISTRATION</span></h2>
-
-    <div class="form-box">
-
-        <form id="registrationForm">
-
-            <label>Full Name</label>
-            <input type="text" id="name" placeholder="Enter player's full name" required>
-
-            <label>Age</label>
-            <input type="number" id="age" placeholder="Enter player's age" min="1" required>
-
-            <label>Gender</label>
-            <select id="gender" required>
-                <option value="">Select gender</option>
-                <option>Male</option>
-                <option>Female</option>
-            </select>
-
-            <label>Phone Number</label>
-            <input type="tel" id="phone" placeholder="Enter contact number" required>
-
-            <label>Parent / Guardian Name (if applicable)</label>
-            <input type="text" id="guardian" placeholder="Parent or guardian name">
-
-            <label>Preferred Position</label>
-            <select id="position" required>
-                <option value="">Choose position</option>
-                <option>Goalkeeper</option>
-                <option>Defender</option>
-                <option>Midfielder</option>
-                <option>Forward</option>
-                <option>Any Position</option>
-            </select>
-
-            <label>Why do you want to join?</label>
-            <textarea id="message" rows="4" placeholder="Tell us about your football goals"></textarea>
-
-            <button type="submit" class="btn">
-                SUBMIT APPLICATION VIA WHATSAPP
-            </button>
-
-        </form>
-
-    </div>
-</div>
-
-<!-- CONTACT -->
-<div class="contact">
-    <h2>READY TO BECOME A CHAMPION?</h2>
-    <p style="margin:15px 0;">
-        Contact KING VJ SOCCER ACADEMY for registration assistance.
-    </p>
-
-    <a href="contact.html" class="btn">CONTACT ACADEMY</a>
-</div>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 <span>KING VJ SOCCER ACADEMY</span></p>
-    <p>Developing Champions ⚽ Building the Future</p>
-</footer>
-
-<!-- WHATSAPP FORM FUNCTION -->
 <script>
-document.getElementById("registrationForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    // REPLACE WITH YOUR REAL WHATSAPP NUMBER
-    const academyNumber = "256700000000";
-
-    const name = document.getElementById("name").value;
-    const age = document.getElementById("age").value;
-    const gender = document.getElementById("gender").value;
-    const phone = document.getElementById("phone").value;
-    const guardian = document.getElementById("guardian").value;
-    const position = document.getElementById("position").value;
-    const message = document.getElementById("message").value;
-
-    const text = `KING VJ SOCCER ACADEMY REGISTRATION
-
-Player Name: ${name}
-Age: ${age}
-Gender: ${gender}
-Phone: ${phone}
-Guardian: ${guardian}
-Position: ${position}
-Football Goals: ${message}`;
-
-    const url = "https://wa.me/" + academyNumber + "?text=" + encodeURIComponent(text);
-
-    window.open(url, "_blank");
-});
+setTimeout(() => {
+    window.location.href = "home.html";
+}, 2000);
 </script>
 
 </body>
