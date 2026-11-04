@@ -1,28 +1,117 @@
+
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="KING VJ SOCCER ACADEMY - WE ARE THE KINGS.">
-<title>Home | KING VJ SOCCER ACADEMY</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head><body>
-<header class="site-header"><div class="container nav-wrap">
-<a class="brand" href="index.html"><span class="brand-mark">KV</span><span>KING VJ <small>SOCCER ACADEMY</small></span></a>
-<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-<nav class="main-nav" aria-label="Main navigation">
-<a class="active" href="index.html">Home</a><a class="" href="about.html">About Us</a><a class="" href="programs.html">Programs</a><a class="" href="young-kings.html">Young Kings</a><a class="nav-cta " href="contact.html">Contact Us</a>
-</nav></div></header><main><section class="hero"><div class="hero-shade"></div><div class="container hero-content">
-<p class="eyebrow">WELCOME TO KING VJ SOCCER ACADEMY</p><h1>WE ARE THE <span>KINGS.</span></h1>
-<p class="hero-lead">Building confidence, character and football skills — one young player at a time.</p>
-<div class="hero-actions"><a class="btn btn-primary" href="programs.html">Explore Our Programs</a><a class="btn btn-outline" href="about.html">Discover Our Academy</a></div></div></section>
-<section class="section"><div class="container intro-grid"><div><p class="eyebrow green">MORE THAN FOOTBALL</p><h2>Every champion starts <span>somewhere.</span></h2></div>
-<div><p>At KING VJ SOCCER ACADEMY, we help children grow through the beautiful game. Our focus is on learning, teamwork, discipline, respect and enjoying every moment on the pitch.</p><a class="text-link" href="about.html">Learn more about us →</a></div></div></section>
-<section class="feature-band"><div class="container feature-grid">
-<article class="feature"><b class="feature-icon">⚽</b><h3>Football Skills</h3><p>Build strong foundations through fun, structured training.</p></article>
-<article class="feature"><b class="feature-icon">🤝</b><h3>Teamwork</h3><p>Learn to communicate, cooperate and support one another.</p></article>
-<article class="feature"><b class="feature-icon">⭐</b><h3>Character</h3><p>Grow in confidence, discipline, respect and sportsmanship.</p></article></div></section>
-<section class="section"><div class="container split-section"><div class="photo-panel home-photo"></div><div><p class="eyebrow green">START YOUR JOURNEY</p><h2>A place to learn, play <span>and grow.</span></h2><p>Whether your child is taking their first kick or building on existing skills, our academy aims to create a positive environment where every player can improve at their own pace.</p><a class="btn btn-primary" href="young-kings.html">Meet the Young Kings</a></div></div></section>
-<section class="callout"><div class="container callout-inner"><div><p class="eyebrow">YOUR JOURNEY STARTS HERE</p><h2>Ready to join the team?</h2><p>Get in touch to ask about training and registration.</p></div><a class="btn btn-light" href="contact.html">Contact the Academy</a></div></section></main><footer class="site-footer"><div class="container footer-inner">
-<a class="brand brand-footer" href="index.html"><span class="brand-mark">KV</span><span>KING VJ <small>SOCCER ACADEMY</small></span></a>
-<p>WE ARE THE KINGS.</p><small>© <span class="year"></span> KING VJ SOCCER ACADEMY. All rights reserved.</small>
-</div></footer></body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KING VJ Splash Screen</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #03140b;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.splash {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 0.5s ease 1.5s forwards;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #00ff88;
+    animation: zoom 1s ease;
+}
+
+.ball {
+    font-size: 65px;
+    margin: 25px;
+    animation: bounce 0.8s infinite alternate;
+}
+
+.tagline {
+    letter-spacing: 4px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.loader {
+    width: 160px;
+    height: 4px;
+    background: #153525;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.loader span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: #00ff88;
+    animation: load 2s linear forwards;
+}
+
+@keyframes zoom {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    from { transform: translateY(-10px) rotate(-15deg); }
+    to { transform: translateY(10px) rotate(15deg); }
+}
+
+@keyframes load {
+    to { width: 100%; }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="splash">
+    <div class="logo">KING VJ</div>
+
+    <div class="ball">⚽</div>
+
+    <div class="tagline">SOCCER ACADEMY</div>
+
+    <div class="loader">
+        <span></span>
+    </div>
+</div>
+
+<script>
+setTimeout(() => {
+    window.location.href = "index.html";
+}, 2000);
+</script>
+
+</body>
+</html>
