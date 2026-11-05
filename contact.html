@@ -1,28 +1,62 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="KING VJ SOCCER ACADEMY - WE ARE THE KINGS.">
 <title>Contact Us | KING VJ SOCCER ACADEMY</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head><body>
-<header class="site-header"><div class="container nav-wrap">
-<a class="brand" href="index.html"><span class="brand-mark">KV</span><span>KING VJ <small>SOCCER ACADEMY</small></span></a>
-<button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-<nav class="main-nav" aria-label="Main navigation">
-<a class="" href="index.html">Home</a><a class="" href="about.html">About Us</a><a class="" href="programs.html">Programs</a><a class="" href="young-kings.html">Young Kings</a><a class="nav-cta active-cta" href="contact.html">Contact Us</a>
-</nav></div></header><main><section class="page-hero"><div class="container"><p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p><h1>CONTACT <span>US</span></h1><p>Have a question about training, programs or joining the academy? Get in touch.</p></div></section>
-<section class="section"><div class="container contact-layout"><div><p class="eyebrow green">GET IN TOUCH</p><h2>Let's talk <span>football.</span></h2><p>Contact KING VJ SOCCER ACADEMY for the latest information about registration, training schedules and our programs.</p>
-<div class="contact-detail"><span>☎</span><div><strong>Phone / WhatsApp</strong><p>ADD YOUR PHONE NUMBER</p></div></div>
-<div class="contact-detail"><span>✉</span><div><strong>Email</strong><p>ADD YOUR EMAIL ADDRESS</p></div></div>
-<div class="contact-detail"><span>⌖</span><div><strong>Location</strong><p>Uganda — add your training area</p></div></div>
-<p class="small-note">Replace the phone and email placeholders with your real contact details before sharing the website.</p></div>
-<form class="contact-form" id="contact-form"><h3>Send us a message</h3>
-<label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Enter your name" required>
-<label for="email">Email address</label><input id="email" name="email" type="email" placeholder="Enter your email" required>
-<label for="subject">What would you like to know?</label><select id="subject" name="subject"><option>Joining the academy</option><option>Young Kings (ages 5–7)</option><option>Training programs</option><option>Other question</option></select>
-<label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
-<button class="btn btn-primary" type="submit">Prepare Email</button><p class="form-note">This opens your email app with your message ready to send. It does not store messages on this website.</p></form></div></section></main><footer class="site-footer"><div class="container footer-inner">
-<a class="brand brand-footer" href="index.html"><span class="brand-mark">KV</span><span>KING VJ <small>SOCCER ACADEMY</small></span></a>
-<p>WE ARE THE KINGS.</p><small>© <span class="year"></span> KING VJ SOCCER ACADEMY. All rights reserved.</small>
-</div></footer></body></html>
+<style>
+:root{--green:#087443;--dark:#064d2e;--red:#d62828;--cream:#f7faf7;--ink:#18231d;--muted:#65736a}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+header{background:#fff;box-shadow:0 3px 16px #00000012;position:sticky;top:0;z-index:5}
+.nav{max-width:1150px;margin:auto;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--dark);text-decoration:none}.brand img{width:52px;height:52px;object-fit:contain}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#26352c;text-decoration:none;font-weight:700;font-size:.92rem}nav a:hover,nav a.active{color:var(--red)}
+.hero{background:linear-gradient(100deg,#063d28e8,#087443b8),url('images/team.png') center/cover;color:white;padding:78px 5%}
+.hero-inner{max-width:1150px;margin:auto}.eyebrow{color:#c8f4d9;text-transform:uppercase;letter-spacing:2px;font-size:.78rem;font-weight:800}
+h1{font-size:clamp(2.3rem,5vw,4rem);line-height:1.08;margin:12px 0 18px}.hero p{max-width:650px;font-size:1.08rem;color:#effff4}
+.wrap{max-width:1150px;margin:auto;padding:58px 5%}.intro{text-align:center;margin-bottom:34px}.intro h2{font-size:2rem;margin:0 0 8px;color:var(--dark)}.intro p{color:var(--muted);max-width:700px;margin:auto}
+.layout{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+.panel{background:white;border:1px solid #e5eee7;border-radius:16px;padding:28px;box-shadow:0 8px 28px #12331c0d}
+.panel h3{color:var(--dark);margin:0 0 18px;font-size:1.35rem}
+.info{display:flex;gap:14px;margin:18px 0;align-items:flex-start}.icon{background:#e5f5eb;color:var(--green);border-radius:10px;padding:10px;min-width:42px;text-align:center;font-weight:900}.info strong{display:block}.info span{color:var(--muted)}
+form{display:grid;gap:14px}label{font-weight:700;font-size:.92rem}input,textarea,select{width:100%;margin-top:6px;padding:12px 13px;border:1px solid #d7e3da;border-radius:8px;font:inherit;background:#fbfdfb}textarea{min-height:125px;resize:vertical}input:focus,textarea:focus,select:focus{outline:2px solid #a5dfbd;border-color:var(--green)}
+.btn{display:inline-block;background:var(--red);color:white;text-decoration:none;padding:12px 24px;border:0;border-radius:7px;font-weight:800;cursor:pointer}
+.photo-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}.photo-row img{width:100%;height:190px;object-fit:cover;border-radius:12px}
+.note{font-size:.86rem;color:var(--muted);margin-top:10px}
+.cta{background:var(--dark);color:white;text-align:center;padding:55px 5%}.cta h2{font-size:2rem;margin:0 0 10px}.cta p{max-width:650px;margin:0 auto 22px;color:#d9f1e2}
+footer{background:#032d1b;color:#cde3d5;text-align:center;padding:22px 5%;font-size:.9rem}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.nav{justify-content:center}nav{justify-content:center}.hero{padding:58px 5%}}
+</style></head>
+<body>
+<header><div class="nav">
+<a class="brand" href="index.html"><img src="images/logo.png" alt="KING VJ Soccer Academy logo"><span>KING VJ<br>SOCCER ACADEMY</span></a>
+<nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="past-games.html">Past Games</a><a href="next-games.html">Next Games</a><a href="gallery.html">Gallery</a><a class="active" href="contact.html">Contact</a><a href="join.html">Join Us</a></nav>
+</div></header>
+<section class="hero"><div class="hero-inner"><div class="eyebrow">We would love to hear from you</div><h1>Contact<br>KING VJ SOCCER ACADEMY</h1><p>Have a question about training, joining the academy, or upcoming games? Reach out to our team.</p></div></section>
+<main class="wrap">
+<div class="intro"><h2>Get in Touch</h2><p>Parents, players, and supporters are welcome to contact us. Send a message or use the contact details below.</p></div>
+<div class="layout">
+<section class="panel">
+<h3>Contact Information</h3>
+<div class="info"><div class="icon">☎</div><div><strong>Phone / WhatsApp</strong><span>Add your academy phone number here</span></div></div>
+<div class="info"><div class="icon">✉</div><div><strong>Email</strong><span>Add your academy email address here</span></div></div>
+<div class="info"><div class="icon">⌖</div><div><strong>Training Location</strong><span>Add your training ground or address here</span></div></div>
+<div class="info"><div class="icon">◷</div><div><strong>Training Hours</strong><span>Add your training days and times here</span></div></div>
+<div class="photo-row"><img src="images/team.png" alt="KING VJ Soccer Academy team"><img src="images/training.png" alt="Academy training session"></div>
+</section>
+<section class="panel">
+<h3>Send Us a Message</h3>
+<form action="#" method="post" onsubmit="alert('This sample form is not connected yet. Please add a form service or backend to receive messages.'); return false;">
+<label>Your Name<input type="text" name="name" placeholder="Enter your full name" required></label>
+<label>Email Address<input type="email" name="email" placeholder="you@example.com" required></label>
+<label>Phone Number<input type="tel" name="phone" placeholder="Your phone number"></label>
+<label>Subject<select name="subject"><option>Joining the academy</option><option>Training information</option><option>Upcoming games</option><option>Other question</option></select></label>
+<label>Your Message<textarea name="message" placeholder="Write your message here..." required></textarea></label>
+<button class="btn" type="submit">Send Message</button>
+</form>
+<p class="note">Note: This form is a visual template. It needs a form service or server backend to deliver messages to the academy.</p>
+</section>
+</div>
+</main>
+<section class="cta"><h2>Want to Join the Team?</h2><p>Take the next step in your football journey with KING VJ SOCCER ACADEMY.</p><a class="btn" href="join.html">Join the Academy</a></section>
+<footer>© 2026 KING VJ SOCCER ACADEMY · Play with passion. Grow with purpose.</footer>
+</body></html>
