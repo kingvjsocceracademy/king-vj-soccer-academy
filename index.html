@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KING VJ Splash Screen</title>
+<title>King VJ Soccer Academy</title>
 
 <style>
 * {
@@ -14,80 +14,132 @@
 }
 
 body {
-    background: #03140b;
     font-family: Arial, sans-serif;
     color: white;
+    background: #001b10;
 }
 
-.splash {
-    height: 100vh;
+/* HOMEPAGE BACKGROUND */
+.home {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,20,10,0.35),
+        rgba(0,20,10,0.65)),
+        url("banner.png") center center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 25px;
+    background: rgba(0,0,0,0.65);
+    border-bottom: 2px solid #00ff55;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #00ff55;
+}
+
+/* HERO CONTENT */
+.hero {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: fadeOut 0.5s ease 1.5s forwards;
+    text-align: center;
+    padding: 50px 20px;
 }
 
-.logo {
-    font-size: 35px;
-    font-weight: bold;
-    color: #00ff88;
-    animation: zoom 1s ease;
-}
-
-.ball {
-    font-size: 65px;
-    margin: 25px;
-    animation: bounce 0.8s infinite alternate;
-}
-
-.tagline {
+.hero h3 {
+    color: #00ff55;
     letter-spacing: 4px;
-    font-size: 13px;
-    color: #aaa;
+    margin-bottom: 20px;
 }
 
-.loader {
-    width: 160px;
-    height: 4px;
-    background: #153525;
-    margin-top: 30px;
-    overflow: hidden;
-    border-radius: 10px;
+.hero h1 {
+    font-size: clamp(35px, 7vw, 75px);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    text-shadow: 3px 3px 10px black;
 }
 
-.loader span {
-    display: block;
-    height: 100%;
-    width: 0;
-    background: #00ff88;
-    animation: load 2s linear forwards;
+.hero h1 span {
+    color: #00ff55;
 }
 
-@keyframes zoom {
-    from {
-        opacity: 0;
-        transform: scale(0.5);
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.green {
+    background: #00ff55;
+    color: #001b10;
+}
+
+.white {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: white;
+    color: #001b10;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.65);
+    font-size: 14px;
+}
+
+@media(max-width:600px) {
+    nav {
+        gap: 15px;
     }
-    to {
-        opacity: 1;
-        transform: scale(1);
+
+    nav a {
+        font-size: 14px;
     }
-}
 
-@keyframes bounce {
-    from { transform: translateY(-10px) rotate(-15deg); }
-    to { transform: translateY(10px) rotate(15deg); }
-}
-
-@keyframes load {
-    to { width: 100%; }
-}
-
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        visibility: hidden;
+    .hero p {
+        font-size: 16px;
     }
 }
 </style>
@@ -95,23 +147,50 @@ body {
 
 <body>
 
-<div class="splash">
-    <div class="logo">KING VJ</div>
+<div class="home">
 
-    <div class="ball">⚽</div>
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT US</a>
+    <a href="programs.html">PROGRAMS</a>
+    <a href="#contact">CONTACT</a>
+</nav>
 
-    <div class="tagline">SOCCER ACADEMY</div>
+<section class="hero">
 
-    <div class="loader">
-        <span></span>
+    <h3>PLAY • TRAIN • LEARN • WIN</h3>
+
+    <h1>
+        WELCOME TO<br>
+        <span>KING VJ</span><br>
+        SOCCER ACADEMY
+    </h1>
+
+    <p>
+        Developing Champions. Building Character.
+        <br>
+        We train young talents, develop football skills,
+        and build future champions on and off the pitch.
+    </p>
+
+    <div class="buttons">
+        <a href="programs.html" class="btn green">
+            OUR PROGRAMS
+        </a>
+
+        <a href="about.html" class="btn white">
+            ABOUT OUR ACADEMY
+        </a>
     </div>
-</div>
 
-<script>
-setTimeout(() => {
-    window.location.href = "home.html";
-}, 2000);
-</script>
+</section>
+
+<footer id="contact">
+    © 2026 KING VJ SOCCER ACADEMY |
+    Developing Champions. Building Character.
+</footer>
+
+</div>
 
 </body>
 </html>
