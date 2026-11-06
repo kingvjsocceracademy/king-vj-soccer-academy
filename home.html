@@ -7,7 +7,31 @@ header{padding:15px 6%;display:flex;justify-content:space-between;align-items:ce
 .brand{display:flex;align-items:center;gap:10px;color:#064522;font-weight:900;text-decoration:none}.brand img{width:55px;height:55px;object-fit:contain}
 nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap}nav a{color:#164329;text-decoration:none;font-weight:bold}nav a:hover{color:#e32636}
 .join{background:#e32636;color:white;padding:9px 15px;border-radius:7px}
-.hero{min-height:570px;padding:70px 7%;display:flex;align-items:center;color:white;background:linear-gradient(90deg,#032b16dd,#032b1680,transparent),url('images/training.png') center/cover}
+
+.hero{
+    min-height:520px;
+    padding:70px 7%;
+    display:flex;
+    align-items:center;
+    color:white;
+    background-color:#063b20;
+    background-image:
+        linear-gradient(90deg,#032b16e8,#032b1680),
+        url('images/training.png');
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+@media(max-width:768px){
+    .hero{
+        min-height:450px;
+        padding:50px 5%;
+        background-position:center center;
+        background-size:cover;
+    }
+}
+}
 .hero div{max-width:680px}.tag{background:#b8f329;color:#12351c;padding:7px 13px;border-radius:30px;font-weight:bold}
 h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.05;margin:25px 0}h1 span{color:#b8f329}.hero p{font-size:1.15rem;margin-bottom:25px}
 .btn{display:inline-block;padding:12px 20px;border-radius:7px;text-decoration:none;font-weight:bold;margin:5px 8px 0 0}.red{background:#e32636;color:white}.outline{border:2px solid white;color:white}
