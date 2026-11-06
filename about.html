@@ -8,13 +8,37 @@ header{padding:15px 6%;display:flex;justify-content:space-between;align-items:ce
 nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap}nav a{color:#164329;text-decoration:none;font-weight:bold}nav a:hover{color:#e32636}.join{background:#e32636;color:#fff;padding:9px 15px;border-radius:7px}
 .hero{padding:65px 7%;color:#fff;background:linear-gradient(90deg,#032b16e8,#032b1680),url('images/team.png') center/cover;min-height:360px;display:flex;align-items:center}
 .hero div{max-width:750px}.tag{background:#b8f329;color:#12351c;padding:7px 13px;border-radius:30px;font-weight:bold}.hero h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.08;margin:22px 0}.hero p{font-size:1.15rem}
-section{padding:65px 6%}.intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.intro img{width:100%;border-radius:14px;max-height:440px;object-fit:cover}.small{color:#087a35;font-weight:bold;letter-spacing:2px}.intro h2,.heading h2{font-size:clamp(2rem,4vw,3rem);color:#063b20;line-height:1.15;margin:12px 0 18px}.intro p{margin-bottom:15px;color:#506055}
+section{padding:65px 6%}.intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.intro img{
+width:100%;
+height:auto;
+max-height:440px;
+object-fit:contain;
+object-position:center;
+border-radius:14px;
+display:block;
+}.intro h2,.heading h2{font-size:clamp(2rem,4vw,3rem);color:#063b20;line-height:1.15;margin:12px 0 18px}.intro p{margin-bottom:15px;color:#506055}
 .mission{background:#eaf4ec;text-align:center}.heading{text-align:center;margin-bottom:35px}.heading p{max-width:700px;margin:auto;color:#526158}
 .values{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:35px}.value{background:white;border-radius:12px;padding:25px;box-shadow:0 6px 20px #0000000c}.value h3{color:#087a35;margin-bottom:8px}
-.photo-row{display:grid;grid-template-columns:1fr 1fr;gap:22px}.photo-row img{width:100%;height:300px;object-fit:cover;border-radius:13px}
-.cta{text-align:center;color:white;background:linear-gradient(120deg,#087a35,#063b20)}.cta h2{font-size:2.5rem}.cta p{margin:10px auto 20px;max-width:650px}.btn{display:inline-block;padding:12px 20px;border-radius:7px;text-decoration:none;font-weight:bold;background:#e32636;color:white}
+.photo-row{display:grid;grid-template-columns:1fr 1fr;gap:22px}.photo-row img{
+width:100%;
+height:auto;
+max-height:300px;
+aspect-ratio:16/9;
+object-fit:contain;
+object-position:center;
+border-radius:13px;
+display:block;
+background:#eaf4ec;
+}.btn{display:inline-block;padding:12px 20px;border-radius:7px;text-decoration:none;font-weight:bold;background:#e32636;color:white}
 footer{background:#032b16;color:#d8e8dc;padding:30px 6%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:750px){header{justify-content:center}nav{justify-content:center}.intro,.values,.photo-row{grid-template-columns:1fr}.hero{min-height:300px}}
+@media@media(max-width:750px){
+.intro img{
+max-height:none;
+}
+.photo-row img{
+max-height:none;
+}
+}
 </style></head><body>
 <header><a class="brand" href="index.html"><img src="images/logo.png" alt="Academy logo"><span>KING VJ<br>SOCCER ACADEMY</span></a>
 <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="past-games.html">Past Games</a><a href="next-games.html">Next Games</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a class="join" href="join.html">Join Us</a></nav></header>
