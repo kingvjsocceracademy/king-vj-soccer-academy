@@ -51,7 +51,7 @@ footer{background:#032d1b;color:#cde3d5;text-align:center;padding:22px 5%;font-s
 </section>
 <section class="panel">
 <h3>Player Registration Interest</h3>
-<form action="#" method="post" onsubmit="alert('This sample form is not connected yet. Add a form service or backend to receive registrations.'); return false;">
+<form id="registrationForm">
 <label>Player's Full Name<input name="player_name" type="text" placeholder="Player name" required></label>
 <label>Date of Birth<input name="dob" type="date" required></label>
 <label>Parent / Guardian Name<input name="guardian" type="text" placeholder="Parent or guardian" required></label>
@@ -60,9 +60,9 @@ footer{background:#032d1b;color:#cde3d5;text-align:center;padding:22px 5%;font-s
 <label>Player's Experience<select name="experience"><option>Beginner</option><option>Some experience</option><option>Experienced player</option></select></label>
 <label>Preferred Position<select name="position"><option>Not sure yet</option><option>Goalkeeper</option><option>Defender</option><option>Midfielder</option><option>Forward</option></select></label>
 <label class="full">Message / Questions<textarea name="message" placeholder="Tell us anything we should know"></textarea></label>
-<button class="btn form-btn" type="submit">Submit Interest</button>
+<button class="btn form-btn" type="submit">Send Registration on WhatsApp</button>
 </form>
-<p class="note">This is a sample registration form. It needs a connected form service or server backend to send submissions to the academy. A parent/guardian should complete it for younger players.</p>
+<p class="note">When you submit, WhatsApp opens with your registration details prepared as a message to the academy. Tap Send in WhatsApp to deliver it. A parent/guardian should complete this form for younger players.</p>
 </section>
 </div>
 <div class="steps">
@@ -73,4 +73,24 @@ footer{background:#032d1b;color:#cde3d5;text-align:center;padding:22px 5%;font-s
 </main>
 <section class="cta"><h2>Let's Grow Together!</h2><p>Every great player starts somewhere. Take your first step with KING VJ SOCCER ACADEMY.</p><a class="btn" href="contact.html">Contact Us</a></section>
 <footer>© 2026 KING VJ SOCCER ACADEMY · Play with passion. Grow with purpose.</footer>
+<script>
+document.getElementById('registrationForm').addEventListener('submit', function(e){
+ e.preventDefault();
+ const f=new FormData(this);
+ const message=[
+ 'KING VJ SOCCER ACADEMY — PLAYER REGISTRATION',
+ 'Player: '+(f.get('player_name')||''),
+ 'Date of birth: '+(f.get('dob')||''),
+ 'Parent/Guardian: '+(f.get('guardian')||''),
+ 'Phone: '+(f.get('phone')||''),
+ 'Email: '+(f.get('email')||'Not provided'),
+ 'Experience: '+(f.get('experience')||''),
+ 'Preferred position: '+(f.get('position')||''),
+ 'Message: '+(f.get('message')||'None')
+ ].join('\\n');
+ const phone='256703888884';
+ const url='https://wa.me/'+phone+'?text='+encodeURIComponent(message);
+ window.open(url,'_blank');
+});
+</script>
 </body></html>
