@@ -1,107 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programs | KING VJ Soccer Academy</title>
-  <style>
-    :root{--green:#087a3d;--red:#d92332;--dark:#10251a;--light:#f5f8f5}
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Arial,Helvetica,sans-serif;color:#203128;background:#fff;line-height:1.6}
-    header{background:var(--green);color:#fff;padding:14px 6%;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-    .brand{font-weight:800;font-size:1.15rem;letter-spacing:.5px}
-    nav{display:flex;gap:16px;flex-wrap:wrap}
-    nav a{color:#fff;text-decoration:none;font-weight:700;font-size:.94rem}
-    nav a:hover{color:#ffe1e4}
-    .hero{min-height:330px;background:linear-gradient(90deg,rgba(5,35,18,.82),rgba(5,35,18,.25)),url('images/training.png') center/cover;display:flex;align-items:center;padding:55px 8%;color:#fff}
-    .hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.1;margin-bottom:14px}
-    .hero p{max-width:620px;font-size:1.08rem}
-    .accent{color:#ff5965}
-    .wrap{width:min(1100px,90%);margin:auto}
-    .intro{text-align:center;padding:55px 0 25px}
-    .intro h2,.section-title{font-size:2rem;color:var(--green);margin-bottom:12px}
-    .intro p{max-width:760px;margin:0 auto;color:#526258}
-    .programs{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:22px;padding:25px 0 60px}
-    .card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 8px 25px #10251a12;border:1px solid #e8eee9}
-    .card img{width:100%;height:210px;object-fit:cover;display:block}
-    .card-content{padding:22px}
-    .card h3{color:var(--green);font-size:1.25rem;margin-bottom:8px}
-    .card p{color:#59675e}
-    .tag{display:inline-block;background:#fff0f1;color:var(--red);font-weight:700;font-size:.8rem;padding:5px 10px;border-radius:20px;margin-bottom:10px}
-    .cta{background:var(--dark);color:#fff;text-align:center;padding:48px 6%}
-    .cta h2{font-size:2rem;margin-bottom:10px}
-    .cta p{margin-bottom:22px;color:#dce8df}
-    .btn{display:inline-block;background:var(--red);color:#fff;padding:12px 24px;border-radius:7px;text-decoration:none;font-weight:800}
-    .btn:hover{background:#b91827}
-    footer{background:#071b10;color:#d9e5dc;text-align:center;padding:20px;font-size:.9rem}
-    @media(max-width:600px){header{justify-content:center;text-align:center}nav{justify-content:center}.hero{min-height:280px}}
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Programs | KING VJ Soccer Academy</title>
+<style>
+:root{--green:#087a3d;--red:#d92332;--dark:#10251a;--light:#f5f8f5}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;overflow-x:hidden}
+body{font-family:Arial,Helvetica,sans-serif;color:#203128;background:#fff;line-height:1.5}
+img{display:block;max-width:100%}
+header{background:var(--green);color:#fff;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{font-weight:900;font-size:1.05rem;letter-spacing:.3px}
+nav{display:flex;gap:8px 13px;flex-wrap:wrap;align-items:center}
+nav a{color:#fff;text-decoration:none;font-weight:700;font-size:14px}
+nav a:hover{color:#ffe1e4}
+.hero{min-height:260px;background-color:#063b20;background-image:linear-gradient(90deg,rgba(5,35,18,.86),rgba(5,35,18,.25)),url('images/training.png');background-position:center;background-size:cover;background-repeat:no-repeat;display:flex;align-items:center;padding:42px 7%;color:#fff}
+.hero h1{font-size:clamp(32px,5vw,58px);line-height:1.08;margin-bottom:10px}
+.hero p{max-width:600px;font-size:clamp(15px,2vw,17px)}
+.accent{color:#ff5965}
+.wrap{width:min(1100px,90%);margin:auto}
+.intro{text-align:center;padding:30px 0 15px}
+.intro h2,.section-title{font-size:clamp(25px,3.5vw,34px);color:var(--green);margin-bottom:8px}
+.intro p{max-width:720px;margin:0 auto;color:#526258;font-size:15px}
+.programs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:18px 0 35px}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px #10251a12;border:1px solid #e8eee9;min-width:0}
+.card img{width:100%;height:clamp(160px,20vw,220px);object-fit:cover;object-position:center;background:#eaf4ec}
+.card-content{padding:16px}
+.card h3{color:var(--green);font-size:18px;margin:0 0 6px}
+.card p{color:#59675e;font-size:14px;line-height:1.45}
+.tag{display:inline-block;background:#fff0f1;color:var(--red);font-weight:700;font-size:11px;padding:4px 9px;border-radius:20px;margin-bottom:7px}
+.cta{background:var(--dark);color:#fff;text-align:center;padding:30px 5%}
+.cta h2{font-size:clamp(24px,3.5vw,32px);margin-bottom:7px}
+.cta p{margin-bottom:15px;color:#dce8df;font-size:15px}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:10px 18px;border-radius:7px;text-decoration:none;font-weight:800}
+.btn:hover{background:#b91827}
+footer{background:#071b10;color:#d9e5dc;text-align:center;padding:17px 5%;font-size:14px}
+@media(max-width:850px){.programs{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.hero{min-height:230px}}
+@media(max-width:600px){
+ header{display:block;padding:12px 5%}.brand{margin-bottom:10px;font-size:15px}
+ nav{gap:8px 11px}nav a{font-size:13px}
+ .hero{min-height:210px;padding:32px 6%;background-size:auto 100%;background-position:center}
+ .wrap{width:90%}.intro{padding:24px 0 10px}
+ .programs{grid-template-columns:1fr;gap:12px;padding:15px 0 25px}
+ .card{display:grid;grid-template-columns:38% minmax(0,1fr);align-items:stretch}
+ .card img{height:100%;min-height:150px;max-height:210px;object-fit:cover}
+ .card-content{padding:13px}.card h3{font-size:17px}.card p{font-size:13px}
+ .cta{padding:25px 5%}
+}
+@media(max-width:360px){.card{grid-template-columns:1fr}.card img{height:190px;max-height:none}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="brand">⚽ KING VJ SOCCER ACADEMY</div>
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="programs.html">Programs</a>
-      <a href="past-games.html">Past Games</a>
-      <a href="next-games.html">Next Games</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="join.html">Join</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div>
-      <h1>Our <span class="accent">Programs</span></h1>
-      <p>Building confident, disciplined, and skilled footballers through age-appropriate coaching, teamwork, and a love for the game.</p>
-    </div>
-  </section>
-
-  <section class="wrap intro">
-    <h2>Train. Learn. Grow.</h2>
-    <p>At KING VJ Soccer Academy, every player gets an opportunity to develop. Our programs focus on football fundamentals, fitness, discipline, teamwork, and match experience in a supportive environment.</p>
-  </section>
-
-  <section class="wrap programs">
-    <article class="card">
-      <img src="images/players.png" alt="Academy players developing their football skills">
-      <div class="card-content"><span class="tag">FOUNDATION</span><h3>Junior Development</h3>
-      <p>Fun, structured sessions for young players to learn ball control, passing, coordination, confidence, and the basics of football.</p></div>
-    </article>
-    <article class="card">
-      <img src="images/training.png" alt="Players taking part in football training">
-      <div class="card-content"><span class="tag">SKILL BUILDING</span><h3>Technical Training</h3>
-      <p>Focused practice in dribbling, first touch, passing, shooting, movement, and decision-making—with regular feedback from coaches.</p></div>
-    </article>
-    <article class="card">
-      <img src="images/team.png" alt="KING VJ Soccer Academy team">
-      <div class="card-content"><span class="tag">TEAMWORK</span><h3>Team & Tactical Training</h3>
-      <p>Players learn positioning, communication, teamwork, match strategy, and how to work together as a team.</p></div>
-    </article>
-    <article class="card">
-      <img src="images/match1.png" alt="Young footballers competing in a match">
-      <div class="card-content"><span class="tag">MATCH EXPERIENCE</span><h3>Games & Competitions</h3>
-      <p>Friendly matches and competitive opportunities help players apply their skills, build resilience, and enjoy the spirit of fair play.</p></div>
-    </article>
-    <article class="card">
-      <img src="images/goalkeeper.png" alt="Goalkeeper training">
-      <div class="card-content"><span class="tag">SPECIALIST</span><h3>Goalkeeper Training</h3>
-      <p>Dedicated goalkeeper work on handling, positioning, footwork, diving technique, distribution, and confidence.</p></div>
-    </article>
-    <article class="card">
-      <img src="images/match2.png" alt="Academy players during football action">
-      <div class="card-content"><span class="tag">PLAYER GROWTH</span><h3>Fitness & Character</h3>
-      <p>Age-appropriate fitness alongside lessons in discipline, respect, leadership, commitment, and sportsmanship.</p></div>
-    </article>
-  </section>
-
-  <section class="cta">
-    <h2>Ready to Join the Team?</h2>
-    <p>Take the next step in your football journey with KING VJ Soccer Academy.</p>
-    <a class="btn" href="join.html">Join Our Academy</a>
-  </section>
-  <footer>© 2026 KING VJ SOCCER ACADEMY · Play with passion. Grow with purpose.</footer>
-</body>
-</html>
+<header><div class="brand">⚽ KING VJ SOCCER ACADEMY</div>
+<nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="past-games.html">Past Games</a><a href="next-games.html">Next Games</a><a href="gallery.html">Gallery</a><a href="join.html">Join</a><a href="contact.html">Contact</a></nav></header>
+<section class="hero"><div><h1>Our <span class="accent">Programs</span></h1><p>Develop confident, disciplined and skilled footballers through coaching, teamwork and a love for the game.</p></div></section>
+<section class="wrap intro"><h2>Train. Learn. Grow.</h2><p>Every player can develop through football fundamentals, fitness, discipline, teamwork and match experience.</p></section>
+<section class="wrap programs">
+<article class="card"><img src="images/players.png" alt="Academy players developing football skills"><div class="card-content"><span class="tag">FOUNDATION</span><h3>Junior Development</h3><p>Fun sessions for young players to learn ball control, passing, coordination and confidence.</p></div></article>
+<article class="card"><img src="images/training.png" alt="Players at football training"><div class="card-content"><span class="tag">SKILL BUILDING</span><h3>Technical Training</h3><p>Practice dribbling, first touch, passing, shooting and decision-making with coach feedback.</p></div></article>
+<article class="card"><img src="images/team.png" alt="KING VJ Soccer Academy team"><div class="card-content"><span class="tag">TEAMWORK</span><h3>Team & Tactical Training</h3><p>Learn positioning, communication, teamwork and match strategy.</p></div></article>
+<article class="card"><img src="images/match1.png" alt="Young footballers in a match"><div class="card-content"><span class="tag">MATCH EXPERIENCE</span><h3>Games & Competitions</h3><p>Friendly and competitive games build confidence, resilience and fair play.</p></div></article>
+<article class="card"><img src="images/goalkeeper.png" alt="Goalkeeper training"><div class="card-content"><span class="tag">SPECIALIST</span><h3>Goalkeeper Training</h3><p>Improve handling, positioning, footwork, diving and distribution.</p></div></article>
+<article class="card"><img src="images/match2.png" alt="Academy players in football action"><div class="card-content"><span class="tag">PLAYER GROWTH</span><h3>Fitness & Character</h3><p>Build fitness, discipline, respect, leadership and sportsmanship.</p></div></article>
+</section>
+<section class="cta"><h2>Ready to Join the Team?</h2><p>Take your next step in football with KING VJ Soccer Academy.</p><a class="btn" href="join.html">Join Our Academy</a></section>
+<footer>© 2026 KING VJ SOCCER ACADEMY · Play with passion. Grow with purpose.</footer>
+</body></html>
