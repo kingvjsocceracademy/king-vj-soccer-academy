@@ -91,33 +91,6 @@ footer{text-align:center;padding:20px 5%;background:#0c3b20;color:white;line-hei
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
-
-/* Embedded About page styles */
-
-:root{--green:#087443;--dark:#064d2e;--red:#d62828;--cream:#f7faf7;--ink:#18231d;--muted:#65736a}
-*{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;overflow-x:hidden}body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.5}img{display:block;max-width:100%}
-header{background:#fff;box-shadow:0 3px 16px #00000012;position:sticky;top:0;z-index:5}.nav{max-width:1150px;margin:auto;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--dark);text-decoration:none;line-height:1.15}.brand img{width:46px;height:46px;object-fit:contain}nav{display:flex;gap:8px 13px;flex-wrap:wrap}nav a{color:#26352c;text-decoration:none;font-weight:700;font-size:14px}nav a:hover,nav a.active{color:var(--red)}
-.hero{background:linear-gradient(100deg,#063d28e8,#087443b8),url('images/team.png') center/cover;color:white;padding:48px 5%;min-height:250px;display:flex;align-items:center}.hero-inner{max-width:1150px;width:100%;margin:auto}.eyebrow{color:#c8f4d9;text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(30px,5vw,56px);line-height:1.08;margin:12px 0}.hero p{max-width:650px;font-size:clamp(15px,2vw,17px);color:#effff4}
-.wrap{max-width:1150px;margin:auto;padding:32px 5%}.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:center}.intro img{width:100%;height:clamp(220px,30vw,340px);object-fit:cover;object-position:center;border-radius:13px;background:#eaf4ec}.eyebrow-green{font-size:12px;font-weight:800;letter-spacing:1.5px;color:#168044}.intro h2,.section-head h2{font-size:clamp(24px,3.5vw,34px);line-height:1.15;color:var(--dark);margin:8px 0 12px}.intro p{font-size:15px;color:#506055;margin:0 0 10px}.btn{display:inline-block;background:var(--red);color:white;text-decoration:none;padding:10px 17px;border-radius:7px;font-weight:800;margin-top:4px}
-.mission{background:#eaf4ec}.section-head{text-align:center;margin-bottom:22px}.section-head p{max-width:650px;margin:0 auto;color:var(--muted);font-size:15px}.values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.value{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 20px #12331c12;border:1px solid #e5eee7}.value h3{color:var(--green);margin:0 0 6px;font-size:18px}.value p{font-size:14px;color:var(--muted);margin:0;line-height:1.45}
-.life{padding-top:30px;padding-bottom:30px}.photo-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.photo-row img{width:100%;height:clamp(180px,26vw,270px);object-fit:cover;object-position:center;border-radius:12px;background:#eaf4ec}.cta{background:#f0f7f1;text-align:center;padding:32px 5%}.cta h2{font-size:clamp(23px,3vw,32px);color:var(--dark);margin:0 0 8px}.cta p{margin:0 0 12px;font-size:15px}footer{background:#032d1b;color:#cde3d5;padding:20px 5%;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:14px}
-/* Mobile: image on the left, text on the right—like the Next Games cards */
-@media(max-width:650px){.nav{justify-content:center}.brand{justify-content:center}nav{justify-content:center}.hero{padding:38px 5%;min-height:210px}.wrap{padding:25px 5%}.intro{grid-template-columns:38% minmax(0,1fr);gap:13px;align-items:start}.intro img{height:100%;min-height:180px;max-height:260px;object-fit:cover}.intro h2{font-size:clamp(18px,4.5vw,25px);margin:6px 0 8px}.intro p{font-size:13px;line-height:1.4;margin-bottom:7px}.intro .btn{font-size:12px;padding:8px 10px}.section-head{margin-bottom:16px}.values{grid-template-columns:1fr;gap:10px}.value{padding:14px}.life{padding-top:24px;padding-bottom:24px}.photo-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo-row img{height:clamp(130px,34vw,210px)}.cta{padding:25px 5%}footer{display:block;text-align:center;padding:18px 5%}footer>div+div{margin-top:8px}}
-@media(max-width:390px){.intro{grid-template-columns:35% minmax(0,1fr);gap:10px}.intro img{min-height:160px}.intro h2{font-size:18px}.intro p{font-size:12.5px}.photo-row{grid-template-columns:1fr}.photo-row img{height:190px}}
-
-.embedded-about{background:#f7faf7;color:#18231d;scroll-margin-top:12px}
-.embedded-about .hero{min-height:250px;padding:48px 5%}
-.embedded-about main{display:block}
-.embedded-about footer{display:none}
-.embedded-about .wrap{max-width:1150px;margin:auto}
-
-
-/* Highlight About in red */
-#home nav a.about-nav-red{color:#ff3946!important;font-weight:900;text-decoration:underline;text-underline-offset:4px}
-#home nav a.about-nav-red:hover{color:#ff7b84!important}
-#home .cta.about-red{background:#d62828;border:2px solid #fff;box-shadow:0 5px 15px #d6282840}
-#home .cta.about-red:hover{background:#a91520}
-
 </style>
 </head>
 <body>
@@ -140,13 +113,13 @@ header{background:#fff;box-shadow:0 3px 16px #00000012;position:sticky;top:0;z-i
 <header>
  <div class="logo">KING VJ SOCCER ACADEMY</div>
  <nav aria-label="Main navigation">
-  <a href="index.html">Home</a><a class="about-nav-red" href="#about-academy">About</a><a href="programs.html">Programs</a><a href="past-games.html">Past Games</a><a href="next-games.html">Next Games</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="past-games.html">Past Games</a><a href="next-games.html">Next Games</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="join.html">Join</a>
  </nav>
 </header>
 <div class="hero"><div>
  <h1>Developing Champions</h1>
  <p>Building talented footballers through discipline, teamwork, hard work, and passion for the beautiful game.</p>
- <a class="cta about-red" href="#about-academy">ABOUT THE ACADEMY</a>
+ <a class="cta" href="join.html">JOIN THE ACADEMY</a>
 </div></div>
 <section>
  <h2>Welcome to KING VJ</h2>
@@ -158,11 +131,6 @@ header{background:#fff;box-shadow:0 3px 16px #00000012;position:sticky;top:0;z-i
  </div>
 </section>
 <footer>© KING VJ SOCCER ACADEMY • Play with passion. Grow with purpose.</footer>
-<section id="about-academy" class="embedded-about" aria-label="About KING VJ Soccer Academy"><section class="hero about-hero"><div class="hero-inner"><div class="eyebrow">Who we are</div><h1>About KING VJ</h1><p>Developing champions. Building character. Inspiring young players through football.</p></div></section>
-<main><section class="wrap intro"><img src="images/team.png" alt="King VJ Soccer Academy team"><div><span class="eyebrow-green">OUR STORY</span><h2>Football is our passion. Youth development is our purpose.</h2><p>We help young players discover talent, improve skills and grow confidence.</p><p>Training and teamwork teach discipline, respect and love for the game.</p><a class="btn" href="join.html">Join Our Team →</a></div></section>
-<section class="mission wrap"><div class="section-head"><span class="eyebrow-green">OUR PURPOSE</span><h2>Building players for life</h2><p>Football develops talented athletes and responsible young people.</p></div><div class="values"><article class="value"><h3>Our Mission</h3><p>Develop young talent through coaching, discipline and match experience.</p></article><article class="value"><h3>Our Vision</h3><p>Inspire confident, skilled and respectful footballers.</p></article><article class="value"><h3>Our Values</h3><p>Respect, teamwork, commitment, fair play and discipline.</p></article></div></section>
-<section class="wrap life"><div class="section-head"><span class="eyebrow-green">LIFE AT THE ACADEMY</span><h2>Train together. Grow together.</h2></div><div class="photo-row"><img src="images/training.png" alt="Young players at football training"><img src="images/players.png" alt="Academy players on the pitch"></div></section>
-<section class="cta"><h2>Ready for your football journey?</h2><p>Take your next step on and off the pitch.</p><a class="btn" href="join.html">Join Our Academy</a></section></main></section>
 </div>
 <script>
 /* Remove splash after 5 seconds; homepage remains responsive underneath. */
