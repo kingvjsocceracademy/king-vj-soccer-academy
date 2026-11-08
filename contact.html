@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact Us | KING VJ SOCCER ACADEMY</title>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Contact Us | KING VJ SOCCER ACADEMY</title>
 <style>
 :root{--green:#087443;--dark:#064d2e;--red:#d62828;--cream:#f7faf7;--ink:#18231d;--muted:#65736a}
 *{box-sizing:border-box;margin:0;padding:0}html,body{width:100%;overflow-x:hidden}body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.45}
@@ -19,6 +16,21 @@ form{display:grid;gap:10px}label{font-weight:700;font-size:13px}input,textarea,s
 <header><div class="nav"><a class="brand" href="index.html"><img src="images/logo.png" alt="KING VJ Soccer Academy logo"><span>KING VJ<br>SOCCER ACADEMY</span></a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programs</a><a href="past-games.html">Past Games</a><a href="next-games.html">Next Games</a><a href="gallery.html">Gallery</a><a class="active" href="contact.html">Contact</a><a href="join.html">Join Us</a></nav></div></header>
 <section class="hero"><div class="hero-inner"><div class="eyebrow">We would love to hear from you</div><h1>Contact <span style="color:#ff6570">KING VJ</span><br>SOCCER ACADEMY</h1><p>Questions about training, joining, or games? Reach out to our team.</p></div></section>
 <main class="wrap"><div class="intro"><h2>Get in Touch</h2><p>Parents, players, and supporters are welcome to contact us.</p></div><div class="layout">
-<section class="panel"><h3>Contact Information</h3><div class="info"><div class="icon">☎</div><div><strong>Phone / WhatsApp</strong><span>Add your academy phone number here</span></div></div><div class="info"><div class="icon">✉</div><div><strong>Email</strong><span>Add your academy email address here</span></div></div><div class="info"><div class="icon">⌖</div><div><strong>Training Location</strong><span>Add your training ground or address here</span></div></div><div class="info"><div class="icon">◷</div><div><strong>Training Hours</strong><span>Add your training days and times here</span></div></div><div class="photo-row"><img src="images/team.png" alt="KING VJ Soccer Academy team"><img src="images/training.png" alt="Academy training session"></div></section>
-<section class="panel"><h3>Send Us a Message</h3><form action="#" method="post" onsubmit="alert('This sample form is not connected yet. Please add a form service or backend to receive messages.');return false;"><label>Your Name<input type="text" name="name" placeholder="Enter your full name" required></label><label>Email Address<input type="email" name="email" placeholder="you@example.com" required></label><label>Phone Number<input type="tel" name="phone" placeholder="Your phone number"></label><label>Subject<select name="subject"><option>Joining the academy</option><option>Training information</option><option>Upcoming games</option><option>Other question</option></select></label><label>Your Message<textarea name="message" placeholder="Write your message here..." required></textarea></label><button class="btn" type="submit">Send Message</button></form><p class="note">This sample form is not connected yet; add a form service or backend to receive messages.</p></section>
-</div></main><section class="cta"><h2>Want to Join the Team?</h2><p>Take the next step in your football journey with KING VJ SOCCER ACADEMY.</p><a class="btn" href="join.html">Join the Academy</a></section><footer>© 2026 KING VJ SOCCER ACADEMY · Play with passion. Grow with purpose.</footer></body></html>
+<section class="panel"><h3>Contact Information</h3><div class="info"><div class="icon">☎</div><div><strong>Phone / WhatsApp</strong><span><a href="https://wa.me/256753669482" target="_blank" rel="noopener">+256 753 669 482</a></span></div></div><div class="info"><div class="icon">✉</div><div><strong>Email</strong><span>Add your academy email address here</span></div></div><div class="info"><div class="icon">⌖</div><div><strong>Training Location</strong><span>Add your training ground or address here</span></div></div><div class="info"><div class="icon">◷</div><div><strong>Training Hours</strong><span>Add your training days and times here</span></div></div><div class="photo-row"><img src="images/team.png" alt="KING VJ Soccer Academy team"><img src="images/training.png" alt="Academy training session"></div></section>
+<section class="panel"><h3>Send Us a Message</h3><form id="contactForm"><label>Your Name<input type="text" name="name" placeholder="Enter your full name" required></label><label>Email Address<input type="email" name="email" placeholder="you@example.com" required></label><label>Phone Number<input type="tel" name="phone" placeholder="Your phone number"></label><label>Subject<select name="subject"><option>Joining the academy</option><option>Training information</option><option>Upcoming games</option><option>Other question</option></select></label><label>Your Message<textarea name="message" placeholder="Write your message here..." required></textarea></label><button class="btn" type="submit">Send Message on WhatsApp</button></form><p class="note">Your message opens in WhatsApp. Review it and tap Send to deliver it to the academy.</p></section>
+</div></main><section class="cta"><h2>Want to Join the Team?</h2><p>Take the next step in your football journey with KING VJ SOCCER ACADEMY.</p><a class="btn" href="join.html">Join the Academy</a></section><footer>© 2026 KING VJ SOCCER ACADEMY · Play with passion. Grow with purpose.</footer>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const data = new FormData(event.currentTarget);
+  const msg = [
+    'KING VJ SOCCER ACADEMY — CONTACT MESSAGE',
+    'Name: ' + data.get('name').trim(),
+    'Email: ' + data.get('email').trim(),
+    'Phone: ' + (data.get('phone').trim() || 'Not provided'),
+    'Subject: ' + data.get('subject'),
+    'Message: ' + data.get('message').trim()
+  ].join('\n');
+  window.open('https://wa.me/256753669482?text=' + encodeURIComponent(msg), '_blank');
+});
+</script></body></html>
